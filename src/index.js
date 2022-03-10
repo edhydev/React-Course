@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const FruitCard = () => {
+const FruitCard = (props) => {
   return (
     <div>
-      <h1>Fruit</h1>
+      <h1>{props.name}</h1>
       <hr />
-      <p>Description ...</p>
+      <p>$ {props.price}</p>
     </div>
   );
 };
@@ -14,8 +14,9 @@ const FruitCard = () => {
 const App = () => {
   return (
     <div>
-      <FruitCard />
-      <FruitCard></FruitCard>
+      <FruitCard name="Apple" price={12.13} />
+      <FruitCard name="Banana" price={13.56} />
+      <FruitCard name="Orange" price={16.2} />
     </div>
   );
 };
