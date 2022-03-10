@@ -1,0 +1,14 @@
+.FruitCard {
+  border: 1px solid black;
+  margin: 1em;
+  border-radius: 0.5em;
+  padding: 1em;
+  background: #fff;
+  color: #000;
+  transition: all 400ms ease-out;
+}
+
+.FruitCard-active {
+  background: linear-gradient(45deg, #000, #4a02f7);
+  color: #fff;
+}

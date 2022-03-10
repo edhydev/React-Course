@@ -1,4 +1,5 @@
 import React from 'react';
+import './FruitCard.css';
 
 class FruitCard extends React.Component {
   constructor() {
@@ -26,15 +27,18 @@ class FruitCard extends React.Component {
   };
 
   render() {
+    const hasItems = this.state.count > 0;
+    const classStyle = `FruitCard ${hasItems ? 'FruitCard-active' : ''}`;
     return (
-      <div>
+      <div className={classStyle}>
         <h1>{this.props.name}</h1>
-        <p>Count: {this.state.count}</p>
+        <p>Amount: {this.state.count}</p>
         <hr />
         <button onClick={this.add}>+</button>
         <button onClick={this.reduce}>-</button>
         <button onClick={this.clean}>Clean</button>
         <p>$ {this.props.price}</p>
+        <p>Total Amount: $ {this.props.price * this.state.count}</p>
       </div>
     );
   }
