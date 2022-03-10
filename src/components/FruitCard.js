@@ -1,5 +1,5 @@
 import React from 'react';
-import './FruitCard.css';
+import styles from './FruitCard.module.css';
 
 class FruitCard extends React.Component {
   constructor() {
@@ -28,7 +28,9 @@ class FruitCard extends React.Component {
 
   render() {
     const hasItems = this.state.count > 0;
-    const classStyle = `FruitCard ${hasItems ? 'FruitCard-active' : ''}`;
+    const activeClass = hasItems ? styles['card-active'] : '';
+    const classStyle = styles.card + ' ' + activeClass;
+
     return (
       <div className={classStyle}>
         <h1>{this.props.name}</h1>
