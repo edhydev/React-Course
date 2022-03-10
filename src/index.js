@@ -1,6 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = <h1>Hola Edgar! :)</h1>;
+const FruitCard = () => {
+  return (
+    <div>
+      <h1>Fruit</h1>
+      <hr />
+      <p>Description ...</p>
+    </div>
+  );
+};
 
-ReactDOM.render(App, document.getElementById('root'));
+const App = () => {
+  return (
+    <div>
+      <FruitCard />
+      <FruitCard></FruitCard>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
